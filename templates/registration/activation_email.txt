@@ -1,0 +1,11 @@
+Hi!
+Greetings from the Pan-IIT Odia Community.
+This email is for verifying your account at {{site}}.
+
+This activation key expires within the next {{expiration_days}} days.
+
+To activate your account follow this link:
+http://{{site}}/accounts/activate/{{activation_key}}/
+with next {{expiration_days}} days.
+
+If you haven't registered for an account at this community, please ignore this email.

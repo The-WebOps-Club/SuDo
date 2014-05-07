@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% load url from future %}
+
+{% block title %}
+    Login
+{% endblock %}
+
+{% block content %}
+
+    <h2>Login on site</h2>
+
+    <form action='' method=POST class="form form-horizontal">
+    <table>
+            {{form.as_p}}
+    </table>
+    {% csrf_token %}
+       <input class="btn btn-primary" type="submit">
+    </form>
+
+    <p>
+        <strong>Don't have an account?</strong> <a href="{% url 'registration_register' %}">Register</a>
+    </p>
+
+{% endblock %}

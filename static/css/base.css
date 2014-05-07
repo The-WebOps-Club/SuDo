@@ -1,0 +1,33 @@
+#navtab li{
+	text-align:left;
+}
+#pf_1{
+	display:inline-block;
+	width:30%;
+	border-right-width:thick;
+	border-color:#000;	
+}
+.nav-stacked li{
+	text-align:center;
+}
+#hover_happen:hover{
+	color:#06F;
+}
+.row{
+	 margin-top:100px;
+}
+footer p{
+	margin-right:20px;
+	float:right;
+}
+footer a{
+	margin-left:3px;
+	margin-right:3px;
+}
+.blue:hover{
+	color:#0066CC;
+}
+.blue{
+	color:#666;
+}
+

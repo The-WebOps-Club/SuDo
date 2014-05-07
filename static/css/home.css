@@ -1,0 +1,25 @@
+.input-group{
+	margin-bottom:1cm;
+}
+#Login{
+	float:right;
+	height:10px;
+}
+#darken{
+	background-color:#333;
+}
+#myCarousel{
+	margin-top:50px;
+}
+.row{
+	margin-top:50px;
+}
+.blue:hover{
+	color:#0066CC;
+}
+.blue{
+	color:#666;
+}
+#hover_happen:hover{
+	color:#06F;
+}
