@@ -1,0 +1,43 @@
+{% extends "index.html" %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-10">
+        <p class="lead">Assignments to be completed:</p>
+    	<!-- {{ formset.management_form }} -->
+        <table class="table">
+            {% for g,f in gistData %}
+                <tr>
+                    <td>{{g.name}}</td>
+                    <td>{{g.desc}}</td>
+                    <td>
+				        <form action="" method="POST" enctype="multipart/form-data">
+				            {% csrf_token %}
+                            {{f.as_p}}
+                            <button type="submit">Upload</button>
+    					</form>
+                    </td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+    <div class="col-md-2">
+    	<button id="attendance" class="btn btn-primary btn-large"> I have attended! </button>
+    </div>
+</div>
+{% endblock %}
+{% block extra_script %}
+<script type="text/javascript">
+$(document).ready(function(){
+	$("#attendance").click(function(){
+		$.ajax({
+			url: "{{site_url}}attend/",
+	  		context: $(this)
+		}).done(function(data) {
+	  		$(data).insertAfter(this);
+	  		$(this).attr({'disabled':''});
+		});
+	});
+});
+</script>
+{% endblock %}

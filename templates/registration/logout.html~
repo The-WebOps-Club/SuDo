@@ -10,5 +10,5 @@
 
 {% endblock %}
 {% block extra_scripts %}
-$(window).url = "{{site_url}}"
+
 {% endblock %}

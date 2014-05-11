@@ -1,18 +1,7 @@
-{% extends "base.html" %}
+<h2>Register</h2>
 
-{% block title %}
-    Register on site
-{% endblock %}
-
-
-{% block content %}
-
-    <h2>Register</h2>
-
-    <form action='' method=POST class="form horizontal">
-    {{ form.as_p }}
-    {% csrf_token %}
+<form action="{{site_url}}accounts/register/" method=POST class="form horizontal">
+	{{ form.as_p }}
+	{% csrf_token %}
 	<input class="btn btn-primary" type=submit>
-    </form>
-
-{% endblock %}
+</form>
