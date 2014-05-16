@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<head>
+	<link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.css">
+	<script src="/bootstrap/js/bootstrap.css"></script>
+	<script>
+	
+	
+	function flag(a)
+	{
+	a.src="flag.png";
+	}
+	
+	var x= new Array(6);var i,row,col, j;
+	for(i=0;i<5;i++)
+	x[i]= new Array(6);
+	for(i=0;i<5;i++)
+		for(j=0;j<5;j++)
+			x[i][j]="1";
+	
+	for(i=0;i<10;i++)
+		{ row=Math.floor(Math.random()*4);
+		  col=Math.floor(Math.random()*4);
+		x[row][col]="boom";		
+		}
+	for(i=0;i<5;i++)
+	for(j=0;j<5;j++)
+	{var s=0;
+	i
+	
+	while(i>=0)
+		{ row=Math.floor(Math.random()*4);
+		  col=Math.floor(Math.random()*4);
+		if(x[row][col]!="boom")
+		{x[row][col]="0";
+		i--;
+		}		
+		}
+	
+	
+	function func(a)
+	{row= a.id.split('_')[0];
+	 col = a.id.split('_')[1];
+	
+		console.log(x[row][col]);
+	if(x[row][col]=="boom")
+		{a.src="boom.png";
+		for(i=0;i<5;i++)
+		for(j=0;j<5;j++)
+			if(x[i][j]=="boom")
+			document.getElementById(i+'_'+j).src='boom.png';
+		}
+	else
+		a.src=x[row][col]+".png";
+	}
+
+	</script>
+	<style>
+	img{
+	width:20px;
+	height:20px;
+	}
+	</style>
+</head>
+<body>
+<!--
+<img type="button" onclick="func()" id="cat" style="height:240px;width:300px" src="/home/keerthana/Pictures/IMG0083A.jpg">
+
+<button type="button" onclick="func()"><img id="cat" style="height:240px;width:300px" src="/home/keerthana/Pictures/IMG0083A.jpg"></button>
+</body>
+-->
+</br>
+<div id="box" align="center" style="border:solid black;border-width:5px;background-color:grey;width:150px;height:150px">
+	<div style="border-width:5px;border:solid black;width:150px;position:relative;left:0px;height:25px">
+	<img type="button" onclick="func1(this)" src="/home/keerthana/Documents/webops/minesweeper/minesweeper_files/sad.png">
+</div>
+	<img type="button" id="0_0" onclick="func(this)" oncontextmenu="flag(this)"  src="up.png">
+	<img type="button" id="0_1" onclick="func(this)" oncontextmenu="flag(this)"  src="up.png">
+	<img type="button" id="0_2" onclick="func(this)" oncontextmenu="flag(this)"  src="up.png">
+	<img type="button" id="0_3" onclick="func(this)" oncontextmenu="flag(this)"  src="up.png">
+	<img type="button" id="0_4" onclick="func(this)" oncontextmenu="flag(this)"  src="up.png"></br>
+	<img type="button" id="1_0" onclick="func(this)" oncontextmenu="flag(this)"  src="up.png">
+	<img type="button" id="1_1" onclick="func(this)" oncontextmenu="flag(this)"  src="up.png">
+	<img type="button" id="1_2" onclick="func(this)" oncontextmenu="flag(this)"  src="up.png">
+	<img type="button" id="1_3" onclick="func(this)" oncontextmenu="flag(this)"  src="up.png">
+	<img type="button" id="1_4" onclick="func(this)" oncontextmenu="flag(this)"  src="up.png"></br>
+	<img type="button" id="2_0" onclick="func(this)" oncontextmenu="flag(this)"  src="up.png">
+	<img type="button" id="2_1" onclick="func(this)" oncontextmenu="flag(this)"  src="up.png">
+	<img type="button" id="2_2" onclick="func(this)" oncontextmenu="flag(this)"  src="up.png">
+	<img type="button" id="2_3" onclick="func(this)" oncontextmenu="flag(this)"  src="up.png">
+	<img type="button" id="2_4" onclick="func(this)" oncontextmenu="flag(this)"  src="up.png"></br>
+	<img type="button" id="3_0" onclick="func(this)" oncontextmenu="flag(this)"  src="up.png">
+	<img type="button" id="3_1" onclick="func(this)" oncontextmenu="flag(this)"  src="up.png">
+	<img type="button" id="3_2" onclick="func(this)" oncontextmenu="flag(this)"  src="up.png">
+	<img type="button" id="3_3" onclick="func(this)" oncontextmenu="flag(this)"  src="up.png">
+	<img type="button" id="3_4" onclick="functhis)"  oncontextmenu="flag(this)"  src="up.png"></br>
+	<img type="button" id="4_0" onclick="func(this)" oncontextmenu="flag(this)"  src="up.png">
+	<img type="button" id="4_1" onclick="func(this)" oncontextmenu="flag(this)"  src="up.png">
+	<img type="button" id="4_2" onclick="func(this)" oncontextmenu="flag(this)"  src="up.png">
+	<img type="button" id="4_3" onclick="func(this)" oncontextmenu="flag(this)"  src="up.png">
+	<img type="button" id="4_4" onclick="func(this)" oncontextmenu="flag(this)"  src="up.png"></br>
+	
+
+
+</body>
+</html>
