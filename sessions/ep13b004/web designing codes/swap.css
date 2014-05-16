@@ -1,0 +1,26 @@
+/* CSS Document */
+
+#red{
+background-color:red;
+height:200px;
+width:200px;
+position:absolute;
+top:50px;
+left:20px;
+}
+
+#blue{
+background-color:blue;
+height:200px;
+width:200px;
+position:absolute;
+top:280px;
+left:20px;
+
+}
+#button{
+width:20px;
+position:absolute;
+top:500px;
+left:20px;
+}
