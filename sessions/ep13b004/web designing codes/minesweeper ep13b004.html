@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>minesweeper</title>
+<script>
+
+function put_no(a){
+var b=(Math.random()*10)%2;
+//console.log(b);
+if(b>1.2){
+a.src="D:/web designing codes/minesweeper/minesweeper_files/boom.png";
+var i;
+for(i=1;i<=25;i++){
+//console.log(b);
+var d=document.getElementById(i);
+//console.log(d);
+ var c=(Math.random()*10)%2;
+ //console.log(c);
+ 
+ if(c>1.2){
+d.src="D:/web designing codes/minesweeper/minesweeper_files/boom.png";;
+}
+ 
+}
+ 
+
+}
+else{
+a.src="D:/web designing codes/minesweeper/minesweeper_files/1.png";
+}
+}
+
+function put_flag(a){
+a.src="D:/web designing codes/minesweeper/minesweeper_files/flag.png"
+event.preventDefault();}
+
+
+</script>
+</head>
+
+<body>
+<table>
+<tr><td><img id="1" width="50px" height="50px" onclick="put_no(this)" oncontextmenu="put_flag(this)" src="D:\web designing codes\minesweeper\minesweeper_files\up.png"/></td>
+<td><img id="2" width="50px" height="50px"  onclick="put_no(this)" oncontextmenu="put_flag(this)" src="D:\web designing codes\minesweeper\minesweeper_files\up.png"/></td>
+<td><img id="3" width="50px" height="50px" onclick="put_no(this)" oncontextmenu="put_flag(this)" src="D:\web designing codes\minesweeper\minesweeper_files\up.png"/></td>
+<td><img id="4" width="50px" height="50px" onclick="put_no(this)" oncontextmenu="put_flag(this)" src="D:\web designing codes\minesweeper\minesweeper_files\up.png"/></td>
+<td><img id="5" width="50px" height="50px" onclick="put_no(this)" oncontextmenu="put_flag(this)" src="D:\web designing codes\minesweeper\minesweeper_files\up.png"/></td></tr>
+
+<tr><td><img id="6" width="50px" height="50px" onclick="put_no(this)" oncontextmenu="put_flag(this)" src="D:\web designing codes\minesweeper\minesweeper_files\up.png"/></td>
+<td><img id="7" width="50px" height="50px" onclick="put_no(this)" oncontextmenu="put_flag(this)" src="D:\web designing codes\minesweeper\minesweeper_files\up.png"/></td>
+<td><img id="8" width="50px" height="50px" onclick="put_no(this)" oncontextmenu="put_flag(this)" src="D:\web designing codes\minesweeper\minesweeper_files\up.png"/></td>
+<td><img id="9" width="50px" height="50px" onclick="put_no(this)" oncontextmenu="put_flag(this)" src="D:\web designing codes\minesweeper\minesweeper_files\up.png"/></td>
+<td><img id="10" width="50px" height="50px" onclick="put_no(this)" oncontextmenu="put_flag(this)" src="D:\web designing codes\minesweeper\minesweeper_files\up.png"/></td></tr>
+
+<tr><td><img id="11" width="50px" height="50px" onclick="put_no(this)" oncontextmenu="put_flag(this)" src="D:\web designing codes\minesweeper\minesweeper_files\up.png"/></td>
+<td><img id="12" width="50px" height="50px" onclick="put_no(this)" oncontextmenu="put_flag(this)" src="D:\web designing codes\minesweeper\minesweeper_files\up.png"/></td>
+<td><img id="13" width="50px" height="50px" onclick="put_no(this)" oncontextmenu="put_flag(this)" src="D:\web designing codes\minesweeper\minesweeper_files\up.png"/></td>
+<td><img id="14" width="50px" height="50px" onclick="put_no(this)" oncontextmenu="put_flag(this)" src="D:\web designing codes\minesweeper\minesweeper_files\up.png"/></td>
+<td><img  id="15" width="50px" height="50px" onclick="put_no(this)" oncontextmenu="put_flag(this)" src="D:\web designing codes\minesweeper\minesweeper_files\up.png"/></td></tr>
+
+<tr><td><img id="16" width="50px" height="50px" onclick="put_no(this)" oncontextmenu="put_flag(this)" src="D:\web designing codes\minesweeper\minesweeper_files\up.png"/></td>
+<td><img id="17" width="50px" height="50px" onclick="put_no(this)" oncontextmenu="put_flag(this)" src="D:\web designing codes\minesweeper\minesweeper_files\up.png"/></td>
+<td><img id="18" width="50px" height="50px" onclick="put_no(this)" oncontextmenu="put_flag(this)" src="D:\web designing codes\minesweeper\minesweeper_files\up.png"/></td>
+<td><img id="19" width="50px" height="50px" onclick="put_no(this)" oncontextmenu="put_flag(this)" src="D:\web designing codes\minesweeper\minesweeper_files\up.png"/></td>
+<td><img  id="20" width="50px" height="50px" onclick="put_no(this)" oncontextmenu="put_flag(this)" src="D:\web designing codes\minesweeper\minesweeper_files\up.png"/></td></tr>
+
+<tr><td><img id="21" width="50px" height="50px" onclick="put_no(this)" oncontextmenu="put_flag(this)" src="D:\web designing codes\minesweeper\minesweeper_files\up.png"/></td>
+<td><img id="22" width="50px" height="50px" onclick="put_no(this)" oncontextmenu="put_flag(this)" src="D:\web designing codes\minesweeper\minesweeper_files\up.png"/></td>
+<td><img id="23" width="50px" height="50px" onclick="put_no(this)" oncontextmenu="put_flag(this)" src="D:\web designing codes\minesweeper\minesweeper_files\up.png"/></td>
+<td><img id="24" width="50px" height="50px" onclick="put_no(this)" oncontextmenu="put_flag(this)" src="D:\web designing codes\minesweeper\minesweeper_files\up.png"/></td>
+<td><img  id="25" width="50px" height="50px" onclick="put_no(this)" oncontextmenu="put_flag(this)" src="D:\web designing codes\minesweeper\minesweeper_files\up.png"/></td></tr>
+
+
+
+</table>
+</body>
+</html>
