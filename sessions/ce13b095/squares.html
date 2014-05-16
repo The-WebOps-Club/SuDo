@@ -1,0 +1,34 @@
+<html>
+<head>
+<title>usage of div tag</title>
+<style>
+#square1 {
+position:absolute;
+}
+#square2 {
+position:absolute;
+}
+</style>
+</head>
+<div ID="square1" style="height:200;width:200;background:green;top:100px;left:100px" onclick="change()">
+</div>
+<div ID="square2" style="height:200;width:200;background:blue;top:100px;left:600px">
+</div>
+<script>
+var a=0;
+s1=document.getElementById("square1");
+s2=document.getElementById("square2");
+function abcd(){
+a++;
+if(a<=5) {
+s1.style.left=(parseInt(s1.style.left)+100)+"px";
+s2.style.left=(parseInt(s2.style.left)-100)+"px";
+}
+else
+exit(0);
+}
+function change() {
+setInterval(abcd,75);
+}
+</script>
+</html>
