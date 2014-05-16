@@ -1,0 +1,49 @@
+<html>
+<body>
+	Roll Number : <input type="text" name="txtJob" id="txtJob">
+	<button id="button" onclick="fn()">Click Here</button>
+	<a id="link" href="http://ccw.iitm.ac.in/?q=IITMHostels/sinfo/">Link</a>
+</body>
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js">
+</script>
+
+<script type="text/javascript">
+
+var rollno;
+var name;
+$("#button").click(function(){
+	rollno=$("#txtJob").val();
+	document.links["link"].href += rollno;
+
+	name=$.ajax({url: 'document.links["link"].href'})
+})
+
+function fn(){
+	getInfo(rollno);
+}
+
+function getInfo(roll){
+	$.ajax({
+		url: 'http://ccw.iitm.ac.in/?q=IITMHostels/sinfo/'+roll,
+		success: function(result){
+			var name = $(result).find("table:first tr:first td:first strong").html();
+			$.ajax({
+				url: 'https://www.facebook.com/search/more/?q='+name,
+				success: function(res){
+					var link = $(res).find("div._zs.fwb:first a").attr('href');
+				 	console.log(link);
+				}
+			})
+		}
+	})
+}
+
+
+
+
+
+
+
+
+</script>
+</html>
