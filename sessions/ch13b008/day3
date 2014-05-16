@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+
+<html>
+<style>
+
+#but
+{
+  position :absolute;
+  top:350px;
+  left:100px;
+}
+.grid
+{
+ height:50px;
+ width:50px;
+}
+
+</style>
+
+<head>
+
+<title>MINESWEEPER</title>
+ 
+</head>
+
+<body>
+
+<img  id="0_0" class="grid" src="minesweeper_files/up.png" onclick="func('0_0')">
+<img id="0_1" class="grid" src="minesweeper_files/up.png" onclick="func('0_1')">
+<img id= "0_2" class="grid" src="minesweeper_files/up.png" onclick="func('0_2')">
+<img id="0_3" class="grid" src="minesweeper_files/up.png" onclick="func('0_3')">
+<img id ="0_4"class="grid" src="minesweeper_files/up.png" onclick="func('0_4')"> <br>
+
+<img id="1_0" class="grid" src="minesweeper_files/up.png" onclick="func('1_0')">
+<img id="1_1" class="grid"src="minesweeper_files/up.png" onclick="func('1_1')">
+<img id="1_2" class="grid" src="minesweeper_files/up.png" onclick="func('1_2')">
+<img id="1_3" class="grid" src="minesweeper_files/up.png" onclick="func('1_3')">
+<img id="1_4" class="grid" src="minesweeper_files/up.png" onclick="func('1_4')"> <br>
+
+<img id="2_0"  class="grid" src="minesweeper_files/up.png" onclick="func('2_0')">
+<img id="2_1" class="grid" src="minesweeper_files/up.png" onclick="func('2_1')">
+<img  id="2_2" class="grid" src="minesweeper_files/up.png" onclick="func('2_2')">
+<img  id="2_3" class="grid" src="minesweeper_files/up.png" onclick="func('2_3')">
+<img  id="2_4" class="grid" src="minesweeper_files/up.png" onclick="func('2_4')"> <br>
+
+<img  id="3_0"  class="grid"  src="minesweeper_files/up.png" onclick="func('3_0')">
+<img id="3_1"  class="grid" src="minesweeper_files/up.png" onclick="func('3_1')">
+<img  id="3_2" class="grid" src="minesweeper_files/up.png" onclick="func('3_2')">
+<img  id="3_3" class="grid" src="minesweeper_files/up.png" onclick="func('3_3')">
+<img id="3_4"  class="grid" src="minesweeper_files/up.png" onclick="func('3_4')"> <br>
+
+<img id="4_0"  class="grid" src="minesweeper_files/up.png"  onclick="func('4_0')">
+<img id="4_1"  class="grid" src="minesweeper_files/up.png" onclick="func('4_1')">
+<img id="4_2"  class="grid" src="minesweeper_files/up.png "onclick="func('4_2')">
+<img id="4_3" class="grid" src="minesweeper_files/up.png " onclick="func('4_3')">
+<img id="4_4" class="grid" src="minesweeper_files/up.png" onclick="func('4_4')" oncontextmenu="flag('4_4')"> <br>
+
+<button id="but" type="button" onclick="mine()" >Play</button>
+
+
+</body>
+
+<script>
+
+boxes= new Array(5);
+	for(var i=1; i<5;++i)
+	{
+	 boxes[i]=new Array(5);
+        }
+
+function mine(
+
+
+
+
+
+
+)
+{
+
+	for(var i=1; i<5;++i)
+	{ 
+ 	for (var j=0;j<5;++j)
+ 	{
+ 	var p=Math.random()*10;
+ 	if(p<5)
+ 	boxes[i][j]="mine";
+
+ 	else
+ 	boxes[i][j]="box";
+        
+ 	}
+      }
+}
+
+
+function func(id)
+
+{
+ var a=document.getElementById(id);
+ var str=id.split("_");
+ i=str[0];
+ j=str[1];
+ 
+ 
+	 if(boxes[i][j]=="mine")
+        {
+          a.src="minesweeper_files/mine.png";
+          for(var l=0;l<5;++l)
+           {
+             for(var m=0;m<5;++m)
+              {
+               if(boxes[l][m]=="mine")
+                { 
+    
+                  var id=l+"_"+m;
+                  var b=document.getElementById(id);
+                  b.src="minesweeper_files/mine.png";
+                 }
+               }
+            }
+         }
+            else if(boxes[i][j]=="box")
+             a.src="minesweeper_files/1.png";
+}
+
+function oncontextmenu(id)
+{
+ var a=document.getElementById(id)
+ a.src="minesweeper_files/flag.png";
+}
+
+
+
+</script>
+
+
+</html>

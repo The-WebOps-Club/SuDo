@@ -1,0 +1,68 @@
+<html>
+
+<head>
+
+<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+
+
+<style>
+
+
+.container1
+{
+position:absolute;
+left:20px;
+ background:red;
+height:600px;
+width:600px;
+
+}
+.container2
+{
+position:absolute;
+left:700px;
+ background:blue;
+height:600px;
+width:600px;
+
+}
+#but1
+{
+ position:absolute;
+top:650px;
+left:600px;
+}
+#but2
+{
+ position:absolute;
+top:700px;
+left:600px;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container1">
+</div>
+<div class="container2">
+</div>
+<button  id="but1" type="button" onclick="colorfunction()" >Setcolor</button>
+<button id="but2" type="button" onclick="swap()">Swap</button>
+
+</body>
+<script>
+function colorfunction()
+{
+ document.getElementsByClassName("container1")[0].style.color="green";
+}
+function swap()
+{
+ document.getElementsByClassName("container1")[0].style.left="680px";
+ document.getElementsByClassName("container2")[0].style.left="20px";
+}
+
+</script>
+
+</html>
