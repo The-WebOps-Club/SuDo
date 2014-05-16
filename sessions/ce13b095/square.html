@@ -1,0 +1,29 @@
+<html>
+<head>
+<title>usage of div tag</title>
+<style>
+#square1 {
+position:absolute;
+top: 100px;
+left:100px;
+}
+#square2 {
+position:absolute;
+top: 100px;
+left:600px;
+}
+</style>
+<script>
+function abcd(){
+s1=document.getElementById("square1");
+s2=document.getElementById("square2");
+s1.style.left=600;
+s2.style.left=100;
+}
+</script>
+</head>
+<div ID="square1" style="height:200;width:200;background:green" onclick="abcd()">
+</div>
+<div ID="square2" style="height:200;width:200;background:blue" onclick="abcd()">
+</div>
+</html>
