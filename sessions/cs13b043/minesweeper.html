@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Minesweeper</title>
+</head>
+
+<style>#face{color:white;}#bombnum{color:white;}</style>
+<body>
+<div id="fun" style="height:175px; width:125px;background-color:black">
+<b id="face">BOMBS:<b id="bombnum" ></b></b><br>
+<b id="face1"></b><br>
+<img type="button" id="0_0" onclick="Myfunction(this)" oncontextmenu="Myfunction1(this)" src="file:///home/sahiti/webops/sudo-3/up.png">
+<img type="button" id="0_1" onclick="Myfunction(this)" oncontextmenu="Myfunction1(this)" src="/home/sahiti/webops/sudo-3/up.png">
+<img type="button" id="0_2" onclick=Myfunction(this) oncontextmenu="Myfunction1(this)" src="/home/sahiti/webops/sudo-3/up.png">
+<img type="button" id="0_3" onclick=Myfunction(this) oncontextmenu="Myfunction1(this)" src="/home/sahiti/webops/sudo-3/up.png">
+<img type="button" id="0_4" onclick=Myfunction(this) oncontextmenu="Myfunction1(this)" src="/home/sahiti/webops/sudo-3/up.png">
+<img type="button" id="0_5" onclick=Myfunction(this) oncontextmenu="Myfunction1(this)" src="/home/sahiti/webops/sudo-3/up.png">
+<img type="button" id="1_0" onclick=Myfunction(this) oncontextmenu="Myfunction1(this)" src="/home/sahiti/webops/sudo-3/up.png">
+<img type="button" id="1_1" onclick=Myfunction(this) oncontextmenu="Myfunction1(this)" src="/home/sahiti/webops/sudo-3/up.png">
+<img type="button" id="1_2" onclick=Myfunction(this) oncontextmenu="Myfunction1(this)" src="/home/sahiti/webops/sudo-3/up.png">
+<img type="button" id="1_3" onclick=Myfunction(this) oncontextmenu="Myfunction1(this)" src="/home/sahiti/webops/sudo-3/up.png">
+<img type="button" id="1_4" onclick=Myfunction(this) oncontextmenu="Myfunction1(this)" src="/home/sahiti/webops/sudo-3/up.png">
+<img type="button" id="1_5" onclick=Myfunction(this) oncontextmenu="Myfunction1(this)" src="/home/sahiti/webops/sudo-3/up.png">
+<img type="button" id="2_0" onclick=Myfunction(this) oncontextmenu="Myfunction1(this)" src="/home/sahiti/webops/sudo-3/up.png">
+<img type="button" id="2_1" onclick=Myfunction(this) oncontextmenu="Myfunction1(this)" src="/home/sahiti/webops/sudo-3/up.png">
+<img type="button" id="2_2" onclick=Myfunction(this) oncontextmenu="Myfunction1(this)" src="/home/sahiti/webops/sudo-3/up.png">
+<img type="button" id="2_3" onclick=Myfunction(this) oncontextmenu="Myfunction1(this)" src="/home/sahiti/webops/sudo-3/up.png">
+<img type="button" id="2_4" onclick=Myfunction(this) oncontextmenu="Myfunction1(this)" src="/home/sahiti/webops/sudo-3/up.png">
+<img type="button" id="2_5" onclick=Myfunction(this) oncontextmenu="Myfunction1(this)" src="/home/sahiti/webops/sudo-3/up.png">
+<img type="button" id="3_0" onclick=Myfunction(this) oncontextmenu="Myfunction1(this)" src="/home/sahiti/webops/sudo-3/up.png">
+<img type="button" id="3_1" onclick=Myfunction(this) oncontextmenu="Myfunction1(this)" src="/home/sahiti/webops/sudo-3/up.png">
+<img type="button" id="3_2" onclick=Myfunction(this) oncontextmenu="Myfunction1(this)" src="/home/sahiti/webops/sudo-3/up.png">
+<img type="button" id="3_3" onclick=Myfunction(this) oncontextmenu="Myfunction1(this)" src="/home/sahiti/webops/sudo-3/up.png">
+<img type="button" id="3_4" onclick=Myfunction(this) oncontextmenu="Myfunction1(this)" src="/home/sahiti/webops/sudo-3/up.png">
+<img type="button" id="3_5" onclick=Myfunction(this) oncontextmenu="Myfunction1(this)" src="/home/sahiti/webops/sudo-3/up.png">
+<img type="button" id="4_0" onclick=Myfunction(this) oncontextmenu="Myfunction1(this)" src="/home/sahiti/webops/sudo-3/up.png">
+<img type="button" id="4_1" onclick=Myfunction(this) oncontextmenu="Myfunction1(this)" src="/home/sahiti/webops/sudo-3/up.png">
+<img type="button" id="4_2" onclick=Myfunction(this) oncontextmenu="Myfunction1(this)" src="/home/sahiti/webops/sudo-3/up.png">
+<img type="button" id="4_3" onclick=Myfunction(this) oncontextmenu="Myfunction1(this)" src="/home/sahiti/webops/sudo-3/up.png">
+<img type="button" id="4_4" onclick=Myfunction(this) oncontextmenu="Myfunction1(this)" src="/home/sahiti/webops/sudo-3/up.png">
+<img type="button" id="4_5" onclick=Myfunction(this) oncontextmenu="Myfunction1(this)" src="/home/sahiti/webops/sudo-3/up.png">
+<img type="button" id="5_0" onclick=Myfunction(this) oncontextmenu="Myfunction1(this)" src="/home/sahiti/webops/sudo-3/up.png">
+<img type="button" id="5_1" onclick=Myfunction(this) oncontextmenu="Myfunction1(this)" src="/home/sahiti/webops/sudo-3/up.png">
+<img type="button" id="5_2" onclick=Myfunction(this) oncontextmenu="Myfunction1(this)" src="/home/sahiti/webops/sudo-3/up.png">
+<img type="button" id="5_3" onclick=Myfunction(this) oncontextmenu="Myfunction1(this)" src="/home/sahiti/webops/sudo-3/up.png">
+<img type="button" id="5_4" onclick=Myfunction(this) oncontextmenu="Myfunction1(this)" src="/home/sahiti/webops/sudo-3/up.png">
+<img type="button" id="5_5" onclick=Myfunction(this) oncontextmenu="Myfunction1(this)" src="/home/sahiti/webops/sudo-3/up.png">
+
+ </div>
+
+</body>
+<script>var v=null;
+var i,j; 
+var f=new Array(6);
+for(i=0;i<6;i++){
+   f[i]=new Array(6);
+   for(j=0;j<6;j++){
+     f[i][j]=1;}
+}var x=0;
+for(i=0;i<7;i++){var row=Math.floor(Math.random()*5);
+var col=Math.floor(Math.random()*5);if (f[row][col]!="boom"){x=x+1;
+f[row][col]="boom";}}
+document.getElementById("bombnum").innerHTML=x;
+function Myfunction(v){
+
+console.log(v);
+var a=v.id.split("_")[0];
+var b=v.id.split("_")[1];
+if(f[a][b]=="boom"){
+ for(i=0;i<6;i++){
+   for(j=0;j<6;j++){
+       if(f[i][j]=="boom"){t=document.getElementById(i+"_"+j)
+            t.src="/home/sahiti/webops/sudo-3/mine.png";
+}
+}
+}
+t=document.getElementById(a+"_"+b);t.src="/home/sahiti/webops/sudo-3/boom.png";
+var s=document.createElement('img');
+s.setAttribute('src',"/home/sahiti/webops/sudo-3/sad.png");
+var w=document.getElementById("face1")
+w.appendChild(s)
+}
+else{t=document.getElementById(a+"_"+b);
+t.src="/home/sahiti/webops/sudo-3"+[a][b]+".png";}
+}
+var z=1;t=0
+function Myfunction1(v){
+if(z==1){
+v.src="/home/sahiti/webops/sudo-3/flag.png";z=0;return}
+if(z==0){
+v.src="/home/sahiti/webops/sudo-3/question.png";z=-1;return}
+if(z=-1){v.src="/home/sahiti/webops/sudo-3/up.png";z=1;return}
+}
+</script>
+</html>
