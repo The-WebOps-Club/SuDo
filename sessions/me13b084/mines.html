@@ -1,0 +1,112 @@
+<html>
+<head>
+
+</head>
+
+<body >
+<button onclick="start()">Play</button> <br>
+
+<img id="r1c1" class="grid" src="minesweeper_files\up.png" onclick="changeimg('r1c1')" oncontextmenu="rightflag(this)"/>
+<img id="r1c2" class="grid" src="minesweeper_files\up.png" onclick="changeimg('r1c2')" oncontextmenu="rightflag(this)"/>
+<img id="r1c3" class="grid" src="minesweeper_files\up.png" onclick="changeimg('r1c3')" oncontextmenu="rightflag(this)"/>
+<img id="r1c4" class="grid" src="minesweeper_files\up.png" onclick="changeimg('r1c4')" oncontextmenu="rightflag(this)"/>
+<img id="r1c5" class="grid" src="minesweeper_files\up.png" onclick="changeimg('r1c5')" oncontextmenu="rightflag(this)"/> <br>
+
+<img id="r2c1" class="grid" src="minesweeper_files\up.png" onclick="changeimg('r2c1')" oncontextmenu="rightflag(this)"/>
+<img id="r2c2" class="grid" src="minesweeper_files\up.png" onclick="changeimg('r2c2')" oncontextmenu="rightflag(this)"/>
+<img id="r2c3" class="grid" src="minesweeper_files\up.png" onclick="changeimg('r2c3')" oncontextmenu="rightflag(this)"/>
+<img id="r2c4" class="grid" src="minesweeper_files\up.png" onclick="changeimg('r2c4')" oncontextmenu="rightflag(this)"/>
+<img id="r2c5" class="grid" src="minesweeper_files\up.png" onclick="changeimg('r2c5')" oncontextmenu="rightflag(this)"/> <br>
+
+<img id="r3c1" class="grid" src="minesweeper_files\up.png" onclick="changeimg('r3c1')" oncontextmenu="rightflag(this)"/>
+<img id="r3c2" class="grid" src="minesweeper_files\up.png" onclick="changeimg('r3c2')" oncontextmenu="rightflag(this)"/>
+<img id="r3c3" class="grid" src="minesweeper_files\up.png" onclick="changeimg('r3c3')" oncontextmenu="rightflag(this)"/>
+<img id="r3c4" class="grid" src="minesweeper_files\up.png" onclick="changeimg('r3c4')" oncontextmenu="rightflag(this)"/>
+<img id="r3c5" class="grid" src="minesweeper_files\up.png" onclick="changeimg('r3c5')"  oncontextmenu="rightflag(this)"/> <br>
+
+<img id="r4c1" class="grid" src="minesweeper_files\up.png" onclick="changeimg('r4c1')" oncontextmenu="rightflag(this)"/>
+<img id="r4c2" class="grid" src="minesweeper_files\up.png" onclick="changeimg('r4c2')" oncontextmenu="rightflag(this)"/>
+<img id="r4c3" class="grid" src="minesweeper_files\up.png" onclick="changeimg('r4c3')" oncontextmenu="rightflag(this)"/>
+<img id="r4c4" class="grid" src="minesweeper_files\up.png" onclick="changeimg('r4c4')" oncontextmenu="rightflag(this)"/>
+<img id="r4c5" class="grid" src="minesweeper_files\up.png" onclick="changeimg('r4c5')" oncontextmenu="rightflag(this)"/> <br>
+
+<img id="r5c1" class="grid" src="minesweeper_files\up.png" onclick="changeimg('r5c1')" oncontextmenu="rightflag(this)"/>
+<img id="r5c2" class="grid" src="minesweeper_files\up.png" onclick="changeimg('r5c2')" oncontextmenu="rightflag(this)"/>
+<img id="r5c3" class="grid" src="minesweeper_files\up.png" onclick="changeimg('r5c3')" oncontextmenu="rightflag(this)"/>
+<img id="r5c4" class="grid" src="minesweeper_files\up.png" onclick="changeimg('r5c4')" oncontextmenu="rightflag(this)"/>
+<img id="r5c5" class="grid" src="minesweeper_files\up.png" onclick="changeimg('r5c5')" oncontextmenu="rightflag(this)"/> <br>
+
+<script>
+
+var i,j,m=0;
+var tab= new Array(6);
+
+function start()
+	{
+	for(i=1;i<6;i++)
+		{
+		tab[i]=new Array(6);
+		for(j=1;j<6;j++)
+			{
+			
+			var p=(Math.random())*10;
+			if(p>3) 
+				{
+				tab[i][j]="x";
+				//m++;
+				console.log(i + " , " + j)
+				}	
+			else tab[i][j]="y";
+			//console.log(p);
+			//if(m>5) break;
+			}
+		}
+	
+}
+		
+function rightflag(u)
+	{
+	u.src="minesweeper_files/flag.png";
+	//event.preventDefault(t);
+	}
+
+
+function changeimg(id)
+	{
+	var x,y;
+	var a=document.getElementById(id);
+	for(i=1;i<6;i++)
+		{
+		for(j=1;j<6;j++)
+			{
+			//console.log("r"+i+"c"+j)
+			
+			if(a.id=="r"+i+"c"+j)
+				{
+				
+				console.log(i + ", " + j + " = " + tab[i][j])
+				if(tab[i][j]=="x")
+					{
+					for(x=1;x<6;x++)
+						{
+						for(y=1;y<6;y++)
+							{
+							if(tab[x][y]=="x")
+								a.src="minesweeper_files/boom.png";
+							}
+						}
+					break;
+					}
+				}
+				else if(tab[i][j]=="y")
+					a.src="minesweeper_files/1.png"
+			}
+		}
+	}
+
+
+</script>
+
+
+</body>
+</html>
